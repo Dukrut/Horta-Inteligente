@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Plant;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class PlantTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class PlantTableSeeder extends Seeder
      */
     public function run()
     {
-        Plant::factory()->count(10)->create();
+        User::factory()->count(10)->create();
     }
 }

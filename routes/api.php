@@ -2,11 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('ok', function (){
-    return ['status'=>true];
-});
+Route::post('auth/login', [Controllers\Api\AuthController::class, 'login']);
+Route::get('/users', [Controllers\Api\UserController::class, 'index']);
